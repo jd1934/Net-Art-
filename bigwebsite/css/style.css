@@ -1,0 +1,77 @@
+/* Make the whole page huge */
+body {
+    min-width: 2500px;
+    min-height: 2500px;
+    background-color: #f7f2e8;
+    overflow: auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Title styling */
+#title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #4a2c2a;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Intro paragraph */
+.intro {
+    font-size: 20px;
+    width: 600px;
+    margin: 40px;
+    padding: 20px;
+    border: 3px solid #4a2c2a;
+    background-color: #fff;
+    opacity: 0.9;
+}
+
+/* Highlighted span */
+.highlight {
+    font-style: italic;
+    color: #c0392b;
+    text-decoration: underline;
+}
+
+/* Secret box div */
+.secret-box {
+    position: absolute;
+    top: 900px;
+    left: 1400px;
+    width: 200px;
+    height: 120px;
+    background-color: #ffe4b5;
+    border: 2px dashed #c0392b;
+    padding: 10px;
+    font-size: 18px;
+    opacity: 0.85;
+}
+
+/* Big image placed far away */
+.big-image {
+    position: absolute;
+    top: 1600px;
+    left: 300px;
+    width: 500px;
+    border: 5px solid #333;
+    opacity: 0.95;
+    z-index: 1;
+}
+
+/* Hidden corner secret */
+#corner-secret {
+    position: absolute;
+    bottom: 50px;
+    right: 80px;
+    font-size: 22px;
+    color: #2c3e50;
+    font-style: italic;
+}
+
+/* Tiny floating span */
+.tiny {
+    font-size: 14px;
+    color: #8e44ad;
+    font-weight: bold;
+}
