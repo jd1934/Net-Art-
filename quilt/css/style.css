@@ -1,0 +1,72 @@
+/* Reset basics */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #111;
+  font-family: system-ui, sans-serif;
+}
+
+/* Quilt container fills full screen */
+.quilt {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  grid-template-rows: repeat(4, 1fr);    /* 4 rows = 20 blocks */
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Base block style */
+.block {
+  border: 2px solid #111;
+}
+
+/* Unique block styles */
+.block-a {
+  background: #ff6b6b;
+}
+
+.block-b {
+  background: #4ecdc4;
+}
+
+.block-c {
+  background: #ffe66d;
+}
+
+.block-d {
+  background: linear-gradient(135deg, #1a535c, #4ecdc4);
+}
+
+.block-e {
+  background: #f7fff7;
+  opacity: 0.85;
+}
+
+/* Optional variations */
+.block-c:nth-of-type(3) {
+  grid-column: span 2;
+}
+
+.block-d:nth-of-type(4) {
+  grid-row: span 2;
+}.block-a {
+  background: pink;
+}.block-b {
+  border-radius: 50%;
+}.block-c {
+  background-image: url("https://picsum.photos/200");
+  background-size: cover;
+}.block-d {
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}.block-b {
+  background: #4ecdc4;
+  border-radius: 50%;
+}
