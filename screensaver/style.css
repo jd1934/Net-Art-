@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(#ffd6f6, #b8eaff);
+    overflow: hidden;
+}
+
+/* CLOUDS */
+.cloud {
+    width: 120px;
+    height: 60px;
+    background: white;
+    border-radius: 50px;
+    position: absolute;
+    opacity: 0.7;
+    filter: blur(1px);
+    transition: transform 1.5s ease, opacity 1.5s ease;
+}
+
+/* Cloud positions */
+.cloud:nth-of-type(1) { top: 20%; left: 10%; }
+.cloud:nth-of-type(2) { top: 50%; left: 60%; }
+.cloud:nth-of-type(3) { top: 70%; left: 30%; }
+
+/* HEARTS */
+.heart {
+    width: 20px;
+    height: 20px;
+    background: pink;
+    position: absolute;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* Heart shape using pseudo-elements */
+.heart::before,
+.heart::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: pink;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before { top: -10px; left: 0; }
+.heart::after { left: -10px; top: 0; }
+
+/* Heart positions */
+.heart:nth-of-type(4) { top: 30%; left: 40%; }
+.heart:nth-of-type(5) { top: 60%; left: 20%; }
+.heart:nth-of-type(6) { top: 80%; left: 70%; }
+
+/* HOVER TRIGGER – pseudo-state */
+body:hover .cloud {
+    opacity: 1;
+    animation: float 6s linear infinite;
+}
+
+body:hover .heart {
+    opacity: 1;
+    animation: rise 4s ease-in-out infinite;
+}
+
+/* KEYFRAMES */
+@keyframes float {
+    from { transform: translateX(0px); }
+    to { transform: translateX(40px); }
+}
+
+@keyframes rise {
+    0% { transform: translateY(0px) rotate(45deg); }
+    50% { transform: translateY(-30px) rotate(45deg) scale(1.2); }
+    100% { transform: translateY(0px) rotate(45deg); }
+}
