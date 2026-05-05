@@ -74,4 +74,17 @@ body {
     font-size: 14px;
     color: #8e44ad;
     font-weight: bold;
+}#corner-secret {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 120px;
+  z-index: 999;
+}
+
+.big-image {
+  position: absolute;
+  top: 800px;
+  left: 1200px;
+  width: 400px;
 }
